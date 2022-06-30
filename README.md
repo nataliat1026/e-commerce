@@ -1,24 +1,62 @@
-# README
+ <!-- 
+ 
+ products
+ categories
+ category_tags
+ reviews
+ images
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ product has many category_tags
+ product has many categories, through category_tags
 
-Things you may want to cover:
+ category has many category_tags
+ category has many products, through category_tags
 
-* Ruby version
+ category_tag belongs to product
+ category_tag belongs to category
 
-* System dependencies
+--
 
-* Configuration
+ product has many reviews
+ product has many users, through reviews
 
-* Database creation
+ user has many reviews
+ user has many products, through reviews
 
-* Database initialization
+ review belongs to product
+ review belongs to user
 
-* How to run the test suite
+ --
 
-* Services (job queues, cache servers, search engines, etc.)
+ product has many images
+ image belongs to product
 
-* Deployment instructions
+ --------------
 
-* ...
+ products
+- name
+- price
+- description
+
+categories
+- name
+
+category_tags
+- product_id
+- category_id
+
+users
+- email
+- password_digest
+
+reviews
+- rating
+- content
+- product_id
+- user_id
+
+images
+- url
+- product_id
+
+ -->

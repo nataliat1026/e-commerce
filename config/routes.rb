@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  get '/hello', to: 'application#hello_world'
+  resources :images, only: []
+  resources :reviews, only: []
+  resources :users, only: []
+  resources :category_tags, only: []
+  resources :categories, only: []
+  resources :products, only: []
 end
