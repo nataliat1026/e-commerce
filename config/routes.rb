@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :users, only: []
   resources :category_tags, only: []
   resources :categories, only: []
-  resources :products, only: []
+  resources :products, only: [:index]
 end
