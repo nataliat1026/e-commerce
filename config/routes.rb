@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :category_tags, only: []
   resources :categories, only: [:show]
   resources :products, only: [:index, :show]
+
+  post '/login' to: 'sessions#login'
+
 end
