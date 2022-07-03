@@ -38,12 +38,12 @@ end
 User.delete_all
 puts "Seeding Users...🌱"
 
-u1 = User.create(email: 'bob@gmail.com', password_digest: 'gg')
-u2 = User.create(email: 'notbob@gmail.com', password_digest: 'gg')
-u3 = User.create(email: 'alsonotbob@gmail.com', password_digest: 'gg')
+u1 = User.create(email: 'bob@gmail.com', password: 'gg')
+u2 = User.create(email: 'notbob@gmail.com', password: 'gg')
+u3 = User.create(email: 'alsonotbob@gmail.com', password: 'gg')
 
 10.times do
-    User.create(email: Faker::Internet.email, password_digest: 'gg')
+    User.create(email: Faker::Internet.email, password: 'gg')
 end
 
 

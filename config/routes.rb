@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :categories, only: [:show]
   resources :products, only: [:index, :show]
 
-  post '/login' to: 'sessions#login'
+  post '/login', to: 'sessions#login'
 
 end
