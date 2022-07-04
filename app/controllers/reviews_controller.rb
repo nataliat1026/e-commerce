@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+    before_action :authorize_user, only: [:create, :update, :destroy]
 
     #   POST /reviews
     def create

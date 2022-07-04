@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
+    before_action :authorize_user, except: [:create]
 
     #   GET /users/:id
     def show
-        current_user = User.find_by(id: session[:current_user])
+        # current_user = User.find(session[:current_user])
         render json: current_user
     end
 

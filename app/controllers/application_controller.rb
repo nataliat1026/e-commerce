@@ -4,6 +4,14 @@ class ApplicationController < ActionController::API
     rescue_from ActiveRecord::RecordNotFound, with: :not_found_message
     rescue_from ActiveRecord::RecordInvalid, with: :invalid_message
 
+    def current_user
+        user = User.find(session[:current_user])
+    end
+
+    def authorize_user
+        render json: { error: 'Not Authorized' } unless current_user
+    end
+
     private
 
     def not_found_message(invalid)
