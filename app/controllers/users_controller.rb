@@ -2,8 +2,8 @@ class UsersController < ApplicationController
 
     #   GET /users/:id
     def show
-        user = User.find(params[:id])
-        render json: user
+        current_user = User.find_by(id: session[:current_user])
+        render json: current_user
     end
 
     #   POST /users
@@ -31,6 +31,5 @@ class UsersController < ApplicationController
     def user_params
         params.permit(:email, :password)
     end
-
 
 end
