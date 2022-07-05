@@ -1,38 +1,42 @@
 require 'faker'
 
-
-Product.delete_all
-puts "Seeding Products...🌱"
-
-p1 = Product.create(
-        name: 'Korean Hot Chicken Ramen Cup Noodle Soup', 
-        price: 11.08, 
-        description: 'Six cups of Korean brand hot chicken flavored ramen noodle cups'
-        )
-
-50.times do
-    Product.create(
-        name: Faker::Commerce.product_name,
-        price: Faker::Commerce.price,
-        description: Faker::Lorem.sentence(
-            word_count: 10, 
-            supplemental: true, 
-            random_words_to_add: 5
-        )
-    )
-end
-
-
 Category.delete_all
 puts "Seeding Categories...🌱"
-
-c1 = Category.create(name: 'Food')
-c2 = Category.create(name: 'Pantry')
-c3 = Category.create(name: 'International')
 
 10.times do
     Category.create(name: Faker::Commerce.department(max: 1, fixed_amount: true))
 end
+
+
+Product.delete_all
+puts "Seeding Products...🌱"
+
+arr_products = [
+    ['Korean Hot Chicken Ramen Cup Noodle Soup', 11.08, 'Six cups of Korean brand hot chicken flavored ramen noodle cups'],
+    ['Ghost Whey Protein', 44.94, 'Ghost Whey was conceived to feed savagery around the clock'],
+    ['Krispy Kreme Glazed Donuts', 6.15, 'Delicious dozen of glazed, diabetes-inducing donuts.']
+]
+arr_products.each do|array| 
+    product = Product.create(
+                name: array[0], 
+                price: array[1], 
+                description: array[2]
+                )
+    product.categories << Category.all.sample
+    
+end
+
+
+Image.delete_all
+puts "Seeding Images...🌱"
+
+img_arr = [
+    ['https://m.media-amazon.com/images/I/81G6Xwj39xL._SX569_.jpg', 'https://m.media-amazon.com/images/I/81UYAjcZRbL._SX569_.jpg', 'https://m.media-amazon.com/images/I/81N9-xYJUAL._SX569_.jpg'],
+    ['https://cdn.shopify.com/s/files/1/2060/6331/products/WheyOREO.png?v=1625590063', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3NKx1XvHDJocAltnEI3ijReu1_U6onq7nV2h7jjtx43vyXuQzTdcnrBTd41uVA2o_ZLw&usqp=CAU'],
+    ['https://www.gannett-cdn.com/presto/2022/04/13/USAT/a8e6f5ae-7e4f-4fea-bc68-0d8eafc1eb5e-KKD_Beat_the_Pump.jpg', 'https://www.fastfoodcalories.com/wp-content/uploads/2019/07/Krispy-Kreme-Original-Glazed-Doughnut.jpg']
+]
+
+img_arr.each.with_index(1){|array, index| array.each{|url| Image.create(url: url, product: Product.find(index))}}
 
 
 User.delete_all
@@ -47,62 +51,14 @@ u3 = User.create(email: 'alsonotbob@gmail.com', password: 'gg')
 end
 
 
-CategoryTag.delete_all
-puts "Seeding Category Tags...🌱"
-
-CategoryTag.create(category_id: c1.id, product_id: p1.id)
-CategoryTag.create(category_id: c2.id, product_id: p1.id)
-CategoryTag.create(category_id: c3.id, product_id: p1.id)
-
-100.times do
-    CategoryTag.create(category_id: rand(1..13), product_id: rand(2..51))
-end
-
-
-Image.delete_all
-puts "Seeding Images...🌱"
-
-Image.create(url: 'https://m.media-amazon.com/images/I/81G6Xwj39xL._SX569_.jpg', product_id: p1.id)
-Image.create(url: 'https://m.media-amazon.com/images/I/81UYAjcZRbL._SX569_.jpg', product_id: p1.id)
-Image.create(url: 'https://m.media-amazon.com/images/I/81N9-xYJUAL._SX569_.jpg', product_id: p1.id)
-
-150.times do
-    Image.create(
-        url:"https://loremflickr.com/#{rand(500..700)}/#{rand(700..900)}/all", 
-        product_id: rand(2..51)
-        )
-end
-
-
 Review.delete_all
 puts "Seeding Reviews...🌱"
 
-Review.create(
-    rating: 5, 
-    content: 'I love the flavor, it is absolutely delicious. Very spicy, but very tasty!',
-    product_id: p1.id,
-    user_id: u1.id
-    )
-
-Review.create(
-    rating: 4, 
-    content: 'I like spicy food, but even so I would give this a solid rank for the spice level. Super yummy!',
-    product_id: p1.id,
-    user_id: u2.id
-    )
-
-Review.create(
-    rating: 2, 
-    content: 'WAY too spicy!',
-    product_id: p1.id,
-    user_id: u3.id
-    )
-
-120.times do
+20.times do
     Review.create(
         rating: rand(1..5),
         content: Faker::Lorem.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 3),
-        product_id: rand(2..50),
+        product_id: rand(1..3),
         user_id: rand(1..13)
     )
 end
