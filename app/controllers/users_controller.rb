@@ -3,14 +3,15 @@ class UsersController < ApplicationController
 
     #   GET /users/:id
     def show
-        # current_user = User.find(session[:current_user])
         render json: current_user
     end
 
     #   POST /users
     def create
-        user = User.create!(user_params)
-        render json: user, status: :created
+        if (user = User.create!(user_params))
+            UserMailer.with(email: user.email).welcome_email.deliver_later
+            render json: user, status: :created
+        end
     end
 
     #   PATCH /users/:id

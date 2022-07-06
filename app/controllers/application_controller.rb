@@ -5,7 +5,7 @@ class ApplicationController < ActionController::API
     rescue_from ActiveRecord::RecordInvalid, with: :invalid_message
 
     def current_user
-        user = User.find(session[:current_user])
+        User.find_by(id: session[:current_user])
     end
 
     def authorize_user

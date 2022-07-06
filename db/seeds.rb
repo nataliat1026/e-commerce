@@ -16,6 +16,7 @@ arr_products = [
     ['Ghost Whey Protein', 44.94, 'Ghost Whey was conceived to feed savagery around the clock'],
     ['Krispy Kreme Glazed Donuts', 6.15, 'Delicious dozen of glazed, diabetes-inducing donuts.']
 ]
+
 arr_products.each do|array| 
     product = Product.create(
                 name: array[0], 
@@ -23,7 +24,6 @@ arr_products.each do|array|
                 description: array[2]
                 )
     product.categories << Category.all.sample
-    
 end
 
 
