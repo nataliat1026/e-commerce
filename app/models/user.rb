@@ -6,4 +6,9 @@ class User < ApplicationRecord
 
     validates :email, presence: true, uniqueness: true
     validates :email, format: /\w+@\w+\.{1}[a-zA-Z]{2,}/, presence: true, uniqueness: true
+
+    def total_reviews
+        reviews.count
+    end
+
 end

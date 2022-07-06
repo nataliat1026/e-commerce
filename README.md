@@ -5,3 +5,4 @@ rails s
 
 npm start --prefix client
 
+natalia.ecommerce.app@gmail.com
