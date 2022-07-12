@@ -15,26 +15,33 @@ const Header = () => {
         </div>
         <div className='headerTextWrapper'>
           <div className='headerTextDiv'>
-            <p className='headerText'>
-              Greeting
-            </p>
-            <p className='headerText'>
-              Account &amp; Lists
-            </p>
+            {/* update all of these links */}
+            <Link className='headerLink' to='/'>
+              <p className='headerTextTop'>
+                Greeting
+              </p>
+              <p className='headerTextBottom'>
+                Account &amp; Lists
+              </p>
+            </Link>
           </div>
           <div className='headerTextDiv'>
-            <p className='headerText'>
-              Returns
-            </p>
-            <p className='headerText'>
-              &amp; Orders
-            </p>
+            <Link className='headerLink' to='/'>
+              <p className='headerTextTop'>
+                Returns
+              </p>
+              <p className='headerTextBottom'>
+                &amp; Orders
+              </p>
+            </Link>
           </div>
           <div className='headerTextDiv'>
-            <ShoppingCartIcon className='shoppingCartIcon' />
-            <p className='headerText'>
-              Basket
-            </p>
+            <Link className='cartLink' to='/'>
+              <ShoppingCartIcon className='shoppingCartIcon' />
+              <p className='headerTextBottom'>
+                Cart
+              </p>
+            </Link>
           </div>
         </div>
       </div>

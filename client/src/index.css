@@ -18,7 +18,7 @@ header {
 }
 
 .logoLink {
-  max-width: 12%;
+  max-width: 10%;
 }
 
 .logo {
@@ -66,17 +66,49 @@ header {
   display: flex;
   color: white;
   align-items: center;
-  font-size: 1rem;
+  white-space: nowrap;
 }
 
 .headerTextDiv {
   margin: 0 1rem;
+  padding: 0.4rem;
   cursor: pointer;
 }
 
-.headerText {
+.headerTextDiv:hover {
+  outline: 1px solid white;
+}
+
+.headerTextTop {
   margin: 0;
-  padding: 0.1rem;
+  padding: 0.2rem;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.headerTextBottom {
+  margin: 0;
+  padding: 0.2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1rem;;
+}
+
+.headerLink {
+  text-decoration: none;
+  color: white;
+}
+
+.headerLink:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.cartLink {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  align-items: center;
 }
 
 .shoppingCartIcon {
