@@ -17,12 +17,17 @@ header {
   align-items: center;
 }
 
+.logoLink {
+  max-width: 12%;
+}
+
 .logo {
-  max-width: 33%;
+  max-width: 100%;
   cursor: pointer;
 }
 
 .searchWrapper {
+  margin: 0 1.2rem 0 1.5rem;
   background-color: #fbbf24;
   display: flex;
   flex-grow: 1;
@@ -41,25 +46,49 @@ header {
   flex-shrink: 1;
   padding: 0.6rem;
   height: 100%;
-  width: 1.5rem;
-  border-radius: 0.4rem;
+  border-radius: 0.4rem 0 0 0.4rem;
+  border-style: none;
+  font-size: 1.2rem;
+}
+
+.searchBar:focus {
+  outline: none;
 }
 
 .searchIcon {
-  height: 2rem;
+  margin: 0 0.3rem;
+  padding: 0.35rem;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.headerTextWrapper {
+  display: flex;
+  color: white;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.headerTextDiv {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.headerText {
+  margin: 0;
+  padding: 0.1rem;
+}
+
+.shoppingCartIcon {
+  height: 2.5rem;
 }
 
 
 
-
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   .headerTopWrapper {
     display: flex;
     flex-direction: column;
     text-align: center;
   }
-
-  .searchWrapper {
-    display: none;
-  }
-}
+} */
