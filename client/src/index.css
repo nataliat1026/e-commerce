@@ -1,7 +1,65 @@
-body {
-  background-color: rgb(144, 161, 179);
+* {
+  box-sizing: border-box;
 }
 
-.fullLogo {
-  max-width: 9%;
+body {
+  background-color: rgb(91, 96, 102);
+  margin: 0;
+}
+
+header {
+  background-color: #131921;
+}
+
+.headerTopWrapper {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-width: 33%;
+  cursor: pointer;
+}
+
+.searchWrapper {
+  background-color: #fbbf24;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  height: 2.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.searchWrapper:hover {
+  background-color: #f59e0b;
+}
+
+.searchBar {
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0.6rem;
+  height: 100%;
+  width: 1.5rem;
+  border-radius: 0.4rem;
+}
+
+.searchIcon {
+  height: 2rem;
+}
+
+
+
+
+@media (max-width: 640px) {
+  .headerTopWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .searchWrapper {
+    display: none;
+  }
 }
