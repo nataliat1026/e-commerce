@@ -1,12 +1,17 @@
 import { Routes, Route } from 'react-router-dom';
-import Header from './Components/Header';
+// import { useState, useEffect } from "react";
+// import NavBar from './Components/NavBar';
 import Landing from './Components/Landing';
 import Footer from './Components/Footer';
 
+
+
 function App() {
+
+
   return (
     <>
-     <Header />
+     {/* <NavBar /> */}
         <Routes>
           <Route path='/' element={<Landing />} />
         </Routes>
