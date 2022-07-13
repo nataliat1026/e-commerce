@@ -1,8 +1,11 @@
 import React from 'react';
+import Banner from './Banner';
 
 const Landing = () => {
   return (
-    <div></div>
+    <div className='landing'>
+      <Banner />
+    </div>
   )
 }
 

@@ -37,9 +37,51 @@ const Header = () => {
         </div>
       </div>
 
-
-
-      <div>
+      {/* Again, update all links */}
+      <div className='headerBottomWrapper'>
+        <Link className='headerBottomLink' to='/'>
+          <p className='menuText'>
+            <MenuIcon className='menuIcon' />
+            Menu
+          </p>
+        </Link>
+        <Link className='headerBottomLink' to='/'>
+          <p className='menuText'>All Products</p>
+        </Link>
+        <Link className='headerBottomLink' to='/'>
+          <p className='menuText'>Grocery</p>
+        </Link>
+        <Link className='headerBottomLink' to='/'>
+          <p className='menuText'>Home</p>
+        </Link>
+        <Link className='headerBottomLink' to='/'>
+          <p className='menuText'>Jewelry</p>
+        </Link>
+        <Link className='headerBottomLink' to='/'>
+          <p className='menuText'>Tools</p>
+        </Link>
+        <Link className='headerBottomLink' to='/'>
+          <p className='menuText'>Garden</p>
+        </Link>
+        <Link className='headerBottomLink' to='/'>
+          <p className='menuText'>Kids</p>
+        </Link>
+        <Link className='headerBottomLink' to='/'>
+          <p className='menuText'>Sports</p>
+        </Link>
+        <Link className='headerBottomLink' to='/'>
+          <p className='menuText'>Outdoors</p>
+        </Link>
+        <Link className='headerBottomLink' to='/'>
+          <p className='menuText'>Industrial</p>
+        </Link>
+        <p className='menuText'>Pet Supplies</p>
+        <p className='menuText'>Beauty</p>
+        <p className='menuText'>Books</p>
+        <p className='menuText'>Electronics</p>
+        <p className='menuText'>Toys</p>
+        <p className='menuText'>Amazon Basics</p>
+        <p className='menuText'>Prime Video</p>
 
       </div>
     </header>
