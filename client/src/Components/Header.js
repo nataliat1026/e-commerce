@@ -6,9 +6,9 @@ const Header = () => {
   return (
     <header>
       <div className='headerTopWrapper'>
-        <Link className='logoLink' to='/'>
-          <img className='logo' src='https://i.ibb.co/W04cRMH/logo-light.png' alt="amazon logo with word 'not' in front of it"></img>
-        </Link>
+          <Link className='logoLink' to='/'>
+            <img className='logo' src='https://i.ibb.co/W04cRMH/logo-light.png' alt="amazon logo with word 'not' in front of it"></img>
+          </Link>
         <div className='searchWrapper'>
           <input className='searchBar' type='text'></input>
           <SearchIcon className='searchIcon' />
@@ -17,30 +17,21 @@ const Header = () => {
           <div className='headerTextDiv'>
             {/* update all of these links */}
             <Link className='headerLink' to='/'>
-              <p className='headerTextTop'>
-                Greeting
-              </p>
-              <p className='headerTextBottom'>
-                Account &amp; Lists
-              </p>
+              <p className='headerTextTop'>Greeting</p>
+              <p className='headerTextBottom'>Account &amp; Lists</p>
             </Link>
           </div>
           <div className='headerTextDiv'>
             <Link className='headerLink' to='/'>
-              <p className='headerTextTop'>
-                Returns
-              </p>
-              <p className='headerTextBottom'>
-                &amp; Orders
-              </p>
+              <p className='headerTextTop'>Returns</p>
+              <p className='headerTextBottom'>&amp; Orders</p>
             </Link>
           </div>
           <div className='headerTextDiv'>
             <Link className='cartLink' to='/'>
+              <span className='cartCount'>0</span>
               <ShoppingCartIcon className='shoppingCartIcon' />
-              <p className='headerTextBottom'>
-                Cart
-              </p>
+              <p className='headerTextBottom'>Cart</p>
             </Link>
           </div>
         </div>
