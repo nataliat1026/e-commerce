@@ -194,7 +194,14 @@ body {
   object-fit: cover;
 }
 
+.starIcon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
 
+.ratingContainer {
+  display: flex;
+}
 
 
 

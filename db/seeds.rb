@@ -62,7 +62,7 @@ end
 Review.delete_all
 puts "Seeding Reviews...🌱"
 
-20.times do
+30.times do
     Review.create(
         rating: rand(1..5),
         content: Faker::Lorem.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 3),
