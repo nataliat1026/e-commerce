@@ -5,6 +5,10 @@ class Product < ApplicationRecord
     has_many :users, through: :reviews
     has_many :images
 
+    def product_images
+        images.all
+    end
+
     def average_rating
         (reviews.pluck(:rating).sum / reviews.count).to_f
     end

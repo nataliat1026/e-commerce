@@ -37,44 +37,24 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Again, update all links */}
+      {/* Again, update links */}
       <div className='headerBottomWrapper'>
-        <Link className='headerBottomLink' to='/'>
-          <p className='menuText'>
-            <MenuIcon className='menuIcon' />
-            Menu
-          </p>
-        </Link>
+        <p className='menuText'>
+          <MenuIcon className='menuIcon' />
+          Menu
+        </p>
         <Link className='headerBottomLink' to='/'>
           <p className='menuText'>All Products</p>
         </Link>
-        <Link className='headerBottomLink' to='/'>
-          <p className='menuText'>Grocery</p>
-        </Link>
-        <Link className='headerBottomLink' to='/'>
-          <p className='menuText'>Home</p>
-        </Link>
-        <Link className='headerBottomLink' to='/'>
-          <p className='menuText'>Jewelry</p>
-        </Link>
-        <Link className='headerBottomLink' to='/'>
-          <p className='menuText'>Tools</p>
-        </Link>
-        <Link className='headerBottomLink' to='/'>
-          <p className='menuText'>Garden</p>
-        </Link>
-        <Link className='headerBottomLink' to='/'>
-          <p className='menuText'>Kids</p>
-        </Link>
-        <Link className='headerBottomLink' to='/'>
-          <p className='menuText'>Sports</p>
-        </Link>
-        <Link className='headerBottomLink' to='/'>
-          <p className='menuText'>Outdoors</p>
-        </Link>
-        <Link className='headerBottomLink' to='/'>
-          <p className='menuText'>Industrial</p>
-        </Link>
+        <p className='menuText'>Grocery</p>
+        <p className='menuText'>Home</p>
+        <p className='menuText'>Jewelry</p>
+        <p className='menuText'>Tools</p>
+        <p className='menuText'>Garden</p>
+        <p className='menuText'>Kids</p>
+        <p className='menuText'>Sports</p>
+        <p className='menuText'>Outdoors</p>
+        <p className='menuText'>Industrial</p>
         <p className='menuText'>Pet Supplies</p>
         <p className='menuText'>Beauty</p>
         <p className='menuText'>Books</p>
@@ -82,7 +62,6 @@ const Header = () => {
         <p className='menuText'>Toys</p>
         <p className='menuText'>Amazon Basics</p>
         <p className='menuText'>Prime Video</p>
-
       </div>
     </header>
   )

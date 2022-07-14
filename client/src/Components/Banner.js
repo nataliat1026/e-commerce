@@ -5,6 +5,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 const Banner = () => {
   return (
     <div className='bannerContainer'>
+        <div className='gradient' />
         <Carousel
             autoPlay
             infiniteLoop
@@ -22,7 +23,6 @@ const Banner = () => {
             <div>
                 <img loading='lazy' src='https://images-eu.ssl-images-amazon.com/images/G/02/AmazonMusic/2021/Marketing/SWSpringDeal_DMUX-4280/Gateway/DV2/UK-EN_030821_SpringSitewide_ACQ_GW_Hero_D_1500x600_CV69._CB656397523_.jpg' alt='advertisement for Amazon Music subscription coupon, valued at three months free then standard monthly fee afterward, for new subscribers only'></img>
             </div>
-
         </Carousel>
     </div>
   )

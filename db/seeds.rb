@@ -31,9 +31,17 @@ Image.delete_all
 puts "Seeding Images...🌱"
 
 img_arr = [
-    ['https://m.media-amazon.com/images/I/81G6Xwj39xL._SX569_.jpg', 'https://m.media-amazon.com/images/I/81UYAjcZRbL._SX569_.jpg', 'https://m.media-amazon.com/images/I/81N9-xYJUAL._SX569_.jpg'],
-    ['https://cdn.shopify.com/s/files/1/2060/6331/products/WheyOREO.png?v=1625590063', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3NKx1XvHDJocAltnEI3ijReu1_U6onq7nV2h7jjtx43vyXuQzTdcnrBTd41uVA2o_ZLw&usqp=CAU'],
-    ['https://www.gannett-cdn.com/presto/2022/04/13/USAT/a8e6f5ae-7e4f-4fea-bc68-0d8eafc1eb5e-KKD_Beat_the_Pump.jpg', 'https://www.fastfoodcalories.com/wp-content/uploads/2019/07/Krispy-Kreme-Original-Glazed-Doughnut.jpg']
+    # ramen
+    ['https://m.media-amazon.com/images/I/81G6Xwj39xL._SX569_.jpg', 
+    'https://m.media-amazon.com/images/I/81UYAjcZRbL._SX569_.jpg', 
+    'https://m.media-amazon.com/images/I/81N9-xYJUAL._SX569_.jpg'],
+    # protein powder
+    ['https://cdn.shopify.com/s/files/1/2060/6331/products/WheyOREO.png?v=1625590063', 
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3NKx1XvHDJocAltnEI3ijReu1_U6onq7nV2h7jjtx43vyXuQzTdcnrBTd41uVA2o_ZLw&usqp=CAU'],
+    # donuts
+    ['https://cloudfront-us-east-1.images.arcpublishing.com/advancelocal/2JOPL2WZIRG2BGW7K5MCCK4LLA.jpg', 
+    'https://www.gannett-cdn.com/presto/2022/04/13/USAT/a8e6f5ae-7e4f-4fea-bc68-0d8eafc1eb5e-KKD_Beat_the_Pump.jpg', 
+    'https://www.fastfoodcalories.com/wp-content/uploads/2019/07/Krispy-Kreme-Original-Glazed-Doughnut.jpg']
 ]
 
 img_arr.each.with_index(1){|array, index| array.each{|url| Image.create(url: url, product: Product.find(index))}}
