@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
@@ -84,7 +85,6 @@ body {
 .headerTextTop {
   margin: 0;
   padding: 0.2rem;
-  font-family: sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
 }
@@ -92,7 +92,6 @@ body {
 .headerTextBottom {
   margin: 0;
   padding: 0.2rem;
-  font-family: sans-serif;
   font-weight: bold;
   font-size: 0.925rem;
   line-height: 0.9rem;
@@ -188,20 +187,80 @@ body {
   z-index: 20;
 }
 
-.productThumbnail {
-  width: 18.75rem;
-  height: 18.75rem;
+.productCard {
+  margin: 1.3rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: relative;
+  z-index: 30;
+}
+
+.cardImg {
+  width: 16rem;
+  height: 16rem;
   object-fit: cover;
 }
 
-.starIcon {
-  width: 1.8rem;
-  height: 1.8rem;
+.cardName {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.1rem;
+  
 }
 
 .ratingContainer {
   display: flex;
 }
+
+.starIcon {
+  width: 1.4rem;
+  height: 1.4rem;
+  color: #eab308;
+}
+
+.cardDescription {
+  margin: 0.6rem 0;
+  font-size: 0.8rem;
+}
+
+.cardPrice {
+  margin: 0.4rem 0 1.3rem 0;
+}
+
+.prime {
+  margin: -1.5rem 0 0 0.5rem;
+  display: flex;
+  align-items: center;
+  
+}
+
+.primeImg {
+  width: 4rem;
+}
+
+.primeTxt {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.cardBtn {
+  margin-top: auto;
+  padding: 0.8rem;
+  background-image: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+  border-color: #a88734 #9c7e31 #846a29;
+  border-radius: 0.2rem;
+  border-width: 0.06rem;
+}
+
+
+
+
+
+
+
+
+
 
 
 
